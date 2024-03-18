@@ -33,19 +33,19 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton.extended(
         label: FittedBox(child: Text('Add Markers')),
         onPressed: () async {
-          _markers.add(
-            Marker(
-              markerId: MarkerId('svgAsset'),
-              icon: await MarkerIcon.svgAsset(assetName: 'example/lib/asset/car.svg', context: context, size: 50),
-              position: LatLng(35.8400, 50.9391),
-            ),
-          );
+          // _markers.add(
+          //   Marker(
+          //     markerId: MarkerId('svgAsset'),
+          //     icon: await MarkerIcon.svgAsset(assetName: 'example/car.svg', context: context, size: 50),
+          //     position: LatLng(35.8400, 50.9391),
+          //   ),
+          // );
 
           _markers.add(
             Marker(
               markerId: MarkerId('downloadResizePicture'),
               icon: await MarkerIcon.downloadResizePicture(
-                  url: 'https://thegpscoordinates.net/photos/la/tehran_iran_5u679ezi8f.jpg', imageSize: 150),
+                  url: 'https://swoove.s3.us-east-2.amazonaws.com/agency/2daystelecom%40gmail.com/2daystelecom%40gmail.com1695026816929.jpg', imageSize: 150),
               position: LatLng(35.6892, 51.3890),
             ),
           );
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             Marker(
               markerId: MarkerId('downloadResizePictureCircle'),
               icon: await MarkerIcon.downloadResizePictureCircle(
-                  'https://thegpscoordinates.net/photos/la/tehran_iran_5u679ezi8f.jpg',
+                  'https://swoove.s3.us-east-2.amazonaws.com/agency/2daystelecom%40gmail.com/2daystelecom%40gmail.com1695026816929.jpg',
                   size: 150,
                   addBorder: true,
                   borderColor: Colors.white,
