@@ -183,7 +183,7 @@ class MarkerIcon {
     final ui.Codec codec = await ui.instantiateImageCodec(imageUint8List);
     final ui.FrameInfo imageFI = await codec.getNextFrame();
     paintImage(
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
         alignment: Alignment.center,
         canvas: canvas,
         rect: Rect.fromLTWH(0, 0, size.toDouble(), size.toDouble()),
